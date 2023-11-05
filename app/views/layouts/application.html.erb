@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MonprojetVilla</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <!-- Stylesheets de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+
+    <!-- Stylesheets du thème -->
+    <%= stylesheet_link_tag 'templatemo-villa-agency', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= stylesheet_link_tag 'owl', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= stylesheet_link_tag 'animate', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= stylesheet_link_tag 'fontawesome', media: 'all', 'data-turbo-track': 'reload' %>
+    <!-- ...autres fichiers CSS si nécessaire... -->
+
+
+    <!-- Scripts JavaScript -->
+    <%= javascript_importmap_tags %>
+    <!-- jQuery (Necessary for Bootstrap's JavaScript plugins) -->
+    <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' %>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <%= javascript_include_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' %>
+  </head>
+
+  <body>
+    <%= yield %>
+
+    <!-- Option 1: jQuery et Bootstrap Bundle (inclut Popper) -->
+    <%# <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script> %>
+
+    <!-- Option 2: jQuery, Popper.js et Bootstrap JS (pour les anciennes versions qui exigent Popper.js séparément) -->
+      <%= javascript_include_tag 'js/owl-carousel', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'js/counter', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'js/custom', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+  </body>
+</html>
